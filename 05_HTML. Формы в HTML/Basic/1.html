@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Формы</title>
+</head>
+<body>
+    <form action="http://fe.it-academy.by/TestForm.php" method="post" name="search">
+        <fieldset>
+            <legend>Строка поиска</legend>
+            <label for="search"></label>
+            <input type="text" id="search" > </label><input type="submit" value="Искать"><br>
+            
+<!--форм экшн это сервер, Легенд это название поискового окна, 
+    label for "search" это тип поискового окна, Инпут это вид( здесь текстовый) 
+    id=label это синхронизация -->
+<!---input type=submit это кнопка которая отправляет запрос.
+Как обьединить все запросы одной кнопкой?
+понять правильность расстановки тэгов!!!-->
+
+
+<!--КНОПКИ нажимаются и нельзя отменить нажатие-->
+<span>
+<input type="radio" name="radio" value="сайт">на сайте  
+<input type="radio" name="radio" value="гугл">в google </span>
+            <p> <i>Длина запроса не более 10 символов</i></p>
+
+<!--FIELDSET это ОДНА форма с одной кнопкой отправки
+input type=submit может отправлять несколько форм(fieldset)?-->
+
+        </fieldset>
+
+
+
+    </form>
+    
+</body>
+</html>

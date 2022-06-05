@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>05 HTML Forms</title>
+
+    <style type="text/css">
+
+        TD {
+
+            vertical-align: top;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<table width="700px"> 
+
+<tr>
+
+    <td><b>Простая форма поиска с вариантами:</b> <br>
+
+        <form id="1" name="Simple search form 1" method="get" action="http://fe.it-academy.by/TestForm.php" 
+
+         target="_blank">
+
+        <br>
+
+    <fieldset>
+
+        <legend>Строка поиска</legend>
+
+        <input type="search" name="Search form 1" maxlength="10">
+
+        <input type="submit" value="Искать"> <br>
+
+        <input type="radio" name="radio_group" value="value_01" checked> на сайте
+
+        <input type="radio" name="radio_group" value="value_02"> в google
+
+    </fieldset></form></td>
+
+    <td><b>Простая форма поиска с вариантами:</b> 
+
+        <form id="2" name="Simple search form 2" method="get" action="http://fe.it-academy.by/TestForm.php" 
+
+         target="_blank">
+
+        <br>
+
+    <fieldset>
+
+        <legend>Строка поиска</legend>
+
+        <input type="search" name="Search form 2" autofocus required>
+
+        <input type="submit" value="Искать"> <br>
+
+        <input type="radio" name="radio_group" value="value_01"> на сайте
+
+        <input type="radio" name="radio_group" value="value_02" checked> в google
+
+    </fieldset></form></td> 
+
+</tr>
+
+<tr>
+
+<td><br><br><b>Простая форма авторизации:</b><br>
+
+            <form id="3" name="Simple login form" method="get" action="http://fe.it-academy.by/TestForm.php" 
+
+             target="_blank">
+
+            <br>
+
+        <fieldset>
+
+            <legend>Авторизуйтесь</legend>
+
+            <input type="text" name="login form" required> <sup>*</sup>Логин<br>
+
+            <input type="text" name="password form" required> <sup>*</sup>Пароль<br>
+
+            <input type="checkbox" name="value_1"> Оставаться в системе<br>
+
+            <input type="submit" value="Войти">
+
+        </fieldset></form>
+
+    </td>
+
+<td><br><br><b>Опрос(голосование):</b>
+
+        <form id="4" name="Poll" method="get" action="http://fe.it-academy.by/TestForm.php" 
+
+             target="_blank">
+
+            <br>
+
+        <fieldset>
+
+            <legend>Как вам?</legend>
+
+            <input type="radio" name="radio_group" value="value_01"  checked>Ничего <br>
+
+            <input type="radio" name="radio_group" value="value_02" >Неплохо<br>
+
+            <input type="radio" name="radio_group" value="value_03" >Хорошо<br>
+
+            <input type="radio" name="radio_group" value="value_04" >Супер<br>
+
+            <input type="hidden" name="date_voite" value="2013.12.31">
+
+            <input type="submit">
+
+        </fieldset></form>
+
+    </td>
+
+</tr>
+
+<tr>
+
+<td><br><br><b>Отзыв:</b>
+
+    <form id="5" name="feedback" method="post" action="http://fe.it-academy.by/TestForm.php" 
+
+             target="_blank">
+
+            <br>
+
+        <fieldset>
+
+            <legend>Оставьте Ваш отзыв</legend>
+
+            <input type="text" name="name form" required> <sup>*</sup>Имя<br>
+
+            <input type="text" name="e-mail form" required pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$"> <sup>*</sup>e-mail<br>
+
+            <textarea name="feedback form" cols="15" rows="2" placeholder="Форма отправки"></textarea><br>
+
+            <input type="submit">
+
+        </fieldset></form>
+
+</td>
+
+<td><br><br><b>Выпадающий и мульти списки:</b>
+
+    <form id="7" name="feedback" method="post" action="http://fe.it-academy.by/TestForm.php" 
+
+    target="_blank">
+
+   <br>
+
+<fieldset>
+
+   <legend>Города РБ</legend>
+
+   <select name="list" id="list">
+
+    <option value="1">Брест</option>
+
+    <option value="2">Минск</option>
+
+    <option value="3">Витебск</option></select>
+
+    <select name="list2[]" size="8" multiple id="list2">
+
+    <optgroup label="Города РБ">
+
+    <option value="1">Брест</option>
+
+    <option value="2">Минск</option>
+    <option value="3">Витебск</option>
+
+    </optgroup>
+
+    <optgroup label="Города России">
+
+    <option value="4">Москва</option>
+
+    <option value="5">Рязань</option>
+
+    <option value="6">Магадан</option>
+
+    </optgroup></select>
+
+    <input type="submit" value="Ok">
+
+</fieldset></form></td>
+
+</tr>
+
+<tr>
+
+<td><br><br><b>Загрузка файла на сервер:</b>
+
+    <form id="8" name="Upload" method="post" action="http://fe.it-academy.by/TestForm.php" 
+
+             target="_blank">
+
+            <br>
+
+        <fieldset>
+
+            <legend>Upload</legend>
+
+            <input type="file" name="file"><br>
+
+            Срок хранения (года):<br>
+
+            <input type="text" name="storage period" size="7">
+
+            <input type="submit" value="Загрузить">
+
+        </fieldset></form>
+
+    </td>
+
+<td><br><br><b>Валидация данных HTML5:</b>
+
+    <form id="9" name="Validation" method="get" action="http://fe.it-academy.by/TestForm.php" 
+
+    target="_blank">
+
+   <br>
+
+<fieldset>
+
+   <legend>Строка поиска</legend>
+
+   <input type="search" name="Search form 3" pattern="^[А-Яа-яЁё\s]+$" placeholder="Только русские буквы" size="22"><br>
+
+   <input type="tel" name="tel" pattern="[\+]{1}[0-9]{3}-[0-9]{2}-[0-9]{7}" placeholder="+375-ХХ-ХХХХХХХ" size="22"><br>
+
+   <input type="submit" value="Проверить">
+
+</fieldset></form></td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>

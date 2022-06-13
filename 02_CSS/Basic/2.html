@@ -4,31 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
- h4{text-indent: 10px}
- ul{ list-style: upper-roman; width: 350px; }
-
-
-    </style>
+    <title>02_CSS_Background_lists_container_design</title>
 </head>
+<style>
+body{
+    margin-left:30px;
+}
+ul {
+    list-style: upper-roman; font-weight: bolder; width: 350px; 
+}
+li ul {
+    list-style: lower-roman; font-weight: normal;
+}
+div{ background-color: black; color: green; width: 400px; overflow: auto; max-height: 80px; 
+    font-family: 'Courier New', Courier, monospace; font-size: 80%; padding: 10px 0px 10px 0px; margin-left: -20px;
+}
+</style>
 <body>
-
-   <h4> I. Контейнер с кодом</h4>
-    <ul> i. Цвет фона: черный <br>
-    ii. Цвет текста:зеленый <br>
-    iii. Ширина: 400px <br>
-    iv. Максимальная высота контейнера: 4-е строки <br>
-    v.Переполнение: автоматическое</ul>
-  <h4> II. Список</h4>
-    <ul> Ширина:350px <br>
-   ii. Тип списка: римские цифры <br>
-  iii.Тип вложенного списка: римские нижний регистр цифры </ul>
-    <code>
-    <div class="code" style="background-color:black; color: green; width: 400px; padding: 40px; overflow: auto; "> 
-    #!/usr/bin/env python <br>
-    print 'Hello. I am a python program.'<br>
+    <ul>
+    <li >Контейнер с кодом
+        <ul>
+            <li>Цвет фона: чёрный</li>
+            <li>Цвет текста: зелёный</li>
+            <li>Ширина: 400px</li>
+            <li>Максимальная высота контейнера: 4-е строки</li>
+            <li>Переполнение: автоматическое</li>
+        </ul>
+    </li>
+    <li>Список
+        <ul>
+            <li>Ширина: 350px</li>
+            <li>Тип списка: римские цифры</li>
+            <li>Тип вложения: римские нижний регистр цифры</li>
+        </ul>
+    </li> 
+</ul>
+<div>#!/usr/bin/env python <br>
+    print 'Hello. I am a python program.' <br>
     name = raw_input("What is your name?") <br>
-    print "Hello there, " + name + "!" </div></code>
+    print "Hello there, " + name + "!"</div>
+
 </body>
 </html>
